@@ -16,7 +16,8 @@ namespace LifePointsPrototype.Controller {
             return lyricsMod.sampLyrics;
         }
 
-        public void ProjectLyrics(Label lyricProj, string lyrictoDisp) {
+        public void 
+            ProjectLyrics(Label lyricProj, string lyrictoDisp) {
             lyricProj.Text = lyrictoDisp;
         }
     }

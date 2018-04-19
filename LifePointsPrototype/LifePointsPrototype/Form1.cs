@@ -16,6 +16,7 @@ namespace LifePointsPrototype
         public Controller.SystemOperations sysOps;
         public Controller.ThemeOperations themeOps;
         public Views.Form_Project secScreen;
+        
         public Model.SystemModels.ActiveTheme actTheme;
         public Model.SystemModels sysModel;
         public Model.LyricsModel lyrcModels;
@@ -69,16 +70,20 @@ namespace LifePointsPrototype
             secScreen.parent = this;
             secScreen.themeOps = themeOps;
             secScreen.SetDefaultTheme();
-
+            //secScreen.Size =  Screen.PrimaryScreen.WorkingArea.Size;
             //secScreen.TopLevel = false;
             //pnl_secScreen.Controls.Add(secScreen);
             secScreen.Show();
+
+            
         }
         
 
         private void dgv_lyrics_CellClick(object sender, DataGridViewCellEventArgs e) {
             string selectedLyrics = dgv_lyrics.SelectedCells[0].Value.ToString();
             lyrcisOps.ProjectLyrics(secScreen.lbl_lyricDisp, selectedLyrics);
+            lyrcisOps.ProjectLyrics(this.lblLivePreview, selectedLyrics);
+
         }
 
         private void btn_addTheme_Click(object sender, EventArgs e) {
@@ -88,5 +93,40 @@ namespace LifePointsPrototype
             form_ThemeEditor.InitializeData();
             sysOps.ShowThemeEditor(form_ThemeEditor);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btnshowscrn.Text == "Off Air")
+            {
+                secScreen.Hide();
+                btnshowscrn.Text = "On Air";
+            }
+            else
+            {
+                secScreen.Show();
+                
+                btnshowscrn.Text = "Off Air";
+            }
+               
+         
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_lyrics_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

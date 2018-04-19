@@ -28,9 +28,12 @@
             // 
             // lbl_lyricDisp
             // 
+            this.lbl_lyricDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_lyricDisp.AutoSize = true;
             this.lbl_lyricDisp.ForeColor = System.Drawing.Color.White;
-            this.lbl_lyricDisp.Location = new System.Drawing.Point(67, 84);
+            this.lbl_lyricDisp.Location = new System.Drawing.Point(12, 9);
             this.lbl_lyricDisp.Name = "lbl_lyricDisp";
             this.lbl_lyricDisp.Size = new System.Drawing.Size(169, 52);
             this.lbl_lyricDisp.TabIndex = 0;
